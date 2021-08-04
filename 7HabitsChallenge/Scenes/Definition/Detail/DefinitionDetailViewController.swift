@@ -24,6 +24,7 @@ class DefinitionDetailViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: DefinitionDetailViewDataSource.DefinitionSection.aspects.cellIdentifier())
         tableView.register(TextFieldCell.self, forCellReuseIdentifier: DefinitionDetailViewDataSource.DefinitionSection.content.cellIdentifier())
         tableView.allowsSelectionDuringEditing = true
+        tableView.contentInsetAdjustmentBehavior = isNew ? .never : .automatic
         setEditing(isNew, animated: false)
     }
 
@@ -118,6 +119,10 @@ class DefinitionDetailViewController: UITableViewController {
         if let aspect = dataSource.itemIdentifier(for: indexPath) {
             navigationController?.pushViewController(LifeAspectToValuesTableVC(aspect: aspect), animated: true)
         }
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 && tableView.isEditing ? 120 : tableView.rowHeight
     }
 
     deinit {

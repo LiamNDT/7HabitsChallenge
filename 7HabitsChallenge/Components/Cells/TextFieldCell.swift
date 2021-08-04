@@ -24,42 +24,30 @@ class TextFieldCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-//    func configure(content: String, changedAction: @escaping ContentChangedAction) {
-//        textField.text = content
-//        self.changedAction = changedAction
-//    }
-
-    lazy var icon = UIImageView(image: nil)
-    lazy var textField = UITextField(frame: .zero)
+    lazy var textField = UITextView(frame: .zero)
 }
 
 extension TextFieldCell {
     private func setupViews() {
-        icon.tintColor = AppColor.secondary
         textField.delegate = self
-
-        [icon, textField].forEach {
+        textField.font = .systemFont(ofSize: 16)
+        [textField].forEach {
             addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         NSLayoutConstraint.activate([
-            icon.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 10),
-            icon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            icon.heightAnchor.constraint(equalToConstant: 30),
-            icon.widthAnchor.constraint(equalToConstant: 30),
-
-            textField.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            textField.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 10),
+            textField.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
+            textField.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor),
             textField.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor),
-            textField.heightAnchor.constraint(equalToConstant: 40)
+            textField.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
 }
 
-extension TextFieldCell: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+extension TextFieldCell: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if let originalText = textField.text {
-            let content = (originalText as NSString).replacingCharacters(in: range, with: string)
+            let content = (originalText as NSString).replacingCharacters(in: range, with: text)
             changedAction?(content)
         }
         return true

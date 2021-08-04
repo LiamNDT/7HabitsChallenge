@@ -15,7 +15,7 @@ class DefinitionDetailViewDataSource: UITableViewDiffableDataSource<DefinitionDe
 
         var displayText: String {
             switch self {
-            case .content: return ""
+            case .content: return "Tuyên ngôn về bạn"
             case .aspects: return "Thuộc về khía cạnh cuộc sống"
             }
         }
@@ -39,8 +39,6 @@ class DefinitionDetailViewDataSource: UITableViewDiffableDataSource<DefinitionDe
             if aspect == .noneEdit {
                 let cell = cell as! TextFieldCell
                 cell.textField.text = definition.content
-                cell.icon.image = UIImage(systemName: "doc.append")
-                cell.textField.placeholder = "Nhập tuyên ngôn về bạn"
                 cell.isUserInteractionEnabled = false
                 cell.textField.isUserInteractionEnabled = true
                 cell.textField.becomeFirstResponder()
