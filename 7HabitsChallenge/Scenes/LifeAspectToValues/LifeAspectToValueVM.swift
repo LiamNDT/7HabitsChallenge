@@ -24,7 +24,7 @@ class LifeAspectToValuesVM {
 
     func fillMatrix() {
         switch aspect {
-            case .none: matrix = []
+            case .none, .noneEdit: matrix = []
             case .marriage: matrix = getMarriageMatrix()
             case .family: matrix = getFamilyMatrix()
             case .money: matrix = getMoneyMatrix()

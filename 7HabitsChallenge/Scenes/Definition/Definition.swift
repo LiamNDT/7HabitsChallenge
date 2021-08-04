@@ -16,18 +16,19 @@ class Definition: Hashable {
         hasher.combine(self.id)
     }
 
-    let id = UUID()
+    var id = UUID()
     var content: String = ""
     var aspects: [LifeThings.Aspect] = []
 }
 
 enum LifeThings {
     enum Aspect: Int, CaseIterable, Hashable {
-        case none
+        case none, noneEdit
         case marriage, family, money, career, pelf, satisfaction, friend, enemy, attendance, yourself, principle
         var title: String {
             switch self {
             case .none: return ""
+            case .noneEdit: return ""
             case .marriage: return "Hôn nhân"
             case .family: return "Gia đình"
             case .money: return "Tiền bạc"
@@ -55,5 +56,9 @@ enum LifeThings {
             case .power: return "Sức mạnh"
             }
         }
+    }
+
+    static func transform(_ stringValue: String) -> Aspect {
+        Aspect.allCases.filter { stringValue == "\($0)" }.first ?? .none
     }
 }
