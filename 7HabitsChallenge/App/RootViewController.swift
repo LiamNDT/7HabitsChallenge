@@ -16,7 +16,7 @@ class RootViewController: UITabBarController {
     }
 
     private func configureTabs() {
-        let tab0 = UINavigationController(rootViewController: DefinitionListViewController(style: .grouped))
+        let tab0 = UINavigationController(rootViewController: ManifestoTableViewController(style: .grouped))
         tab0.tabBarItem = UITabBarItem(title: "Tuyên ngôn", image: UIImage(systemName: "list.bullet.rectangle"), tag: 2)
 
         viewControllers = [tab0]

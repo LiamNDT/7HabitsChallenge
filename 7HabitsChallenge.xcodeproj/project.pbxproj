@@ -12,6 +12,12 @@
 		532F901226BA1BF1005E3C79 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F901126BA1BF1005E3C79 /* Date.swift */; };
 		532F901C26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F901A26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift */; };
 		532F901D26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F901B26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift */; };
+		537748C226BBB21A0035F654 /* ManifestoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C126BBB21A0035F654 /* ManifestoTableViewController.swift */; };
+		537748C426BBB22A0035F654 /* ManifestoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C326BBB22A0035F654 /* ManifestoDetailViewModel.swift */; };
+		537748C626BBB3730035F654 /* ManifestoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C526BBB3730035F654 /* ManifestoDetailViewController.swift */; };
+		537748CA26BBBA530035F654 /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C926BBBA530035F654 /* TextViewCell.swift */; };
+		537748CE26BBD3FB0035F654 /* DefinitionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748CD26BBD3FB0035F654 /* DefinitionRepository.swift */; };
+		537748D026BBE97C0035F654 /* ManifestoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748CF26BBE97C0035F654 /* ManifestoViewModel.swift */; };
 		53BEC82326B8A9FC004D667E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC82226B8A9FC004D667E /* AppDelegate.swift */; };
 		53BEC82526B8A9FC004D667E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC82426B8A9FC004D667E /* SceneDelegate.swift */; };
 		53BEC82C26B8A9FD004D667E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53BEC82B26B8A9FD004D667E /* Assets.xcassets */; };
@@ -46,6 +52,12 @@
 		532F901126BA1BF1005E3C79 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		532F901A26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionLocal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		532F901B26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionLocal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		537748C126BBB21A0035F654 /* ManifestoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoTableViewController.swift; sourceTree = "<group>"; };
+		537748C326BBB22A0035F654 /* ManifestoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoDetailViewModel.swift; sourceTree = "<group>"; };
+		537748C526BBB3730035F654 /* ManifestoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoDetailViewController.swift; sourceTree = "<group>"; };
+		537748C926BBBA530035F654 /* TextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
+		537748CD26BBD3FB0035F654 /* DefinitionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionRepository.swift; sourceTree = "<group>"; };
+		537748CF26BBE97C0035F654 /* ManifestoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoViewModel.swift; sourceTree = "<group>"; };
 		53BEC81F26B8A9FC004D667E /* 7HabitsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 7HabitsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53BEC82226B8A9FC004D667E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53BEC82426B8A9FC004D667E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,14 +117,49 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		532F901926BA2116005E3C79 /* Entity */ = {
+		537748C026BBB2090035F654 /* Manifesto */ = {
+			isa = PBXGroup;
+			children = (
+				537748C826BBB4860035F654 /* Detail */,
+				537748C726BBB4800035F654 /* List */,
+			);
+			path = Manifesto;
+			sourceTree = "<group>";
+		};
+		537748C726BBB4800035F654 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				537748C126BBB21A0035F654 /* ManifestoTableViewController.swift */,
+				537748CF26BBE97C0035F654 /* ManifestoViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		537748C826BBB4860035F654 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				537748C526BBB3730035F654 /* ManifestoDetailViewController.swift */,
+				537748C326BBB22A0035F654 /* ManifestoDetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		537748CB26BBD3A10035F654 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				537748CD26BBD3FB0035F654 /* DefinitionRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		537748CC26BBD3BF0035F654 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				532F901A26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift */,
 				532F901B26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift */,
 				532F900526BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld */,
 			);
-			path = Entity;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		53BEC81626B8A9FC004D667E = {
@@ -137,7 +184,8 @@
 				53BEC83626B8AC45004D667E /* App */,
 				53BEC83726B8AC65004D667E /* Common */,
 				53BEC83826B8AC6B004D667E /* Components */,
-				532F901926BA2116005E3C79 /* Entity */,
+				537748CC26BBD3BF0035F654 /* CoreData */,
+				537748CB26BBD3A10035F654 /* Repository */,
 				53BEC83A26B8AC77004D667E /* Scenes */,
 			);
 			path = 7HabitsChallenge;
@@ -179,6 +227,7 @@
 		53BEC83A26B8AC77004D667E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				537748C026BBB2090035F654 /* Manifesto */,
 				53BEC86D26B8D27C004D667E /* LifeAspectToValues */,
 				53BEC84226B8AD7E004D667E /* Definition */,
 			);
@@ -249,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				53BEC86B26B8C779004D667E /* TextFieldCell.swift */,
+				537748C926BBBA530035F654 /* TextViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -331,15 +381,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537748CE26BBD3FB0035F654 /* DefinitionRepository.swift in Sources */,
+				537748CA26BBBA530035F654 /* TextViewCell.swift in Sources */,
 				53BEC86F26B8D28B004D667E /* LifeAspectToValuesTableVC.swift in Sources */,
 				53BEC82326B8A9FC004D667E /* AppDelegate.swift in Sources */,
+				537748C426BBB22A0035F654 /* ManifestoDetailViewModel.swift in Sources */,
 				532F901C26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift in Sources */,
 				53BEC84126B8AD69004D667E /* AppFont.swift in Sources */,
 				53BEC87126B8D2A3004D667E /* LifeAspectToValueVM.swift in Sources */,
+				537748C626BBB3730035F654 /* ManifestoDetailViewController.swift in Sources */,
 				53BEC84426B8AD98004D667E /* DefinitionListViewController.swift in Sources */,
 				53BEC84026B8AD69004D667E /* AppColor.swift in Sources */,
 				53BEC86526B8B870004D667E /* Definition.swift in Sources */,
 				532F900426BA0F62005E3C79 /* DefinitionListDataSource.swift in Sources */,
+				537748D026BBE97C0035F654 /* ManifestoViewModel.swift in Sources */,
 				532F900726BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld in Sources */,
 				53BEC86126B8B7C0004D667E /* DefinitionDetailViewDataSource.swift in Sources */,
 				53BEC86826B8B919004D667E /* DataSource+Form.swift in Sources */,
@@ -359,6 +414,7 @@
 				532F901226BA1BF1005E3C79 /* Date.swift in Sources */,
 				53BEC85526B8ADFE004D667E /* KeychainWrapper.swift in Sources */,
 				53BEC85926B8ADFE004D667E /* UITableView.swift in Sources */,
+				537748C226BBB21A0035F654 /* ManifestoTableViewController.swift in Sources */,
 				53BEC85A26B8ADFE004D667E /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

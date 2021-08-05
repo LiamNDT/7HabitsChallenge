@@ -7,6 +7,48 @@
 
 import Foundation
 
+enum LifeThings {
+    enum Aspect: Int, CaseIterable, Hashable {
+        case none
+        case marriage, family, money, career, pelf, satisfaction, friend, enemy, attendance, yourself, principle
+        var title: String {
+            switch self {
+            case .none: return ""
+            // case .noneEdit: return ""
+            case .marriage: return "Hôn nhân"
+            case .family: return "Gia đình"
+            case .money: return "Tiền bạc"
+            case .career: return "Công việc"
+            case .pelf: return "Tài sản sở hữu"
+            case .satisfaction: return "Sự thoả mãn"
+            case .friend: return "Bạn bè"
+            case .enemy: return "Kẻ thù"
+            case .attendance: return "Công việc phụng sự"
+            case .yourself: return "Bản thân"
+            case .principle: return "Nguyên lý"
+            }
+        }
+    }
+
+    enum Values: Int, CaseIterable {
+        case none
+        case peace, leadership, intellect, power
+        var title: String {
+            switch self {
+            case .none: return ""
+            case .peace: return "Sự an nhiên"
+            case .leadership: return "Sự dẫn đường"
+            case .intellect: return "Trí tuệ"
+            case .power: return "Sức mạnh"
+            }
+        }
+    }
+
+    static func transform(_ stringValue: String) -> Aspect {
+        Aspect.allCases.filter { stringValue == "\($0)" }.first ?? .none
+    }
+}
+
 struct LifeAspectToValue: Hashable {
     let id = UUID()
     var content: String
@@ -24,18 +66,18 @@ class LifeAspectToValuesVM {
 
     func fillMatrix() {
         switch aspect {
-            case .none, .noneEdit: matrix = []
-            case .marriage: matrix = getMarriageMatrix()
-            case .family: matrix = getFamilyMatrix()
-            case .money: matrix = getMoneyMatrix()
-            case .career: matrix = getCareerMatrix()
-            case .pelf: matrix = getPelfMatrix()
-            case .satisfaction: matrix = getSatisfactionMatrix()
-            case .friend: matrix = getFriendMatrix()
-            case .enemy: matrix = getEnemyMatrix()
-            case .attendance: matrix = getAttendanceMatrix()
-            case .yourself: matrix = getYourselfMatrix()
-            case .principle: matrix = getPrincipleMatrix()
+        case .none: matrix = []
+        case .marriage: matrix = getMarriageMatrix()
+        case .family: matrix = getFamilyMatrix()
+        case .money: matrix = getMoneyMatrix()
+        case .career: matrix = getCareerMatrix()
+        case .pelf: matrix = getPelfMatrix()
+        case .satisfaction: matrix = getSatisfactionMatrix()
+        case .friend: matrix = getFriendMatrix()
+        case .enemy: matrix = getEnemyMatrix()
+        case .attendance: matrix = getAttendanceMatrix()
+        case .yourself: matrix = getYourselfMatrix()
+        case .principle: matrix = getPrincipleMatrix()
         }
     }
 
