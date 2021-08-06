@@ -86,4 +86,25 @@ class DefinitionRepository {
         }
         completion(listOfModel)
     }
+
+    func delete(_ model: ManifestoViewModel.ManifestoItem, completion: @escaping (ManifestoViewModel.ManifestoItem?) -> Void) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityNamed)
+        fetchRequest.predicate = NSPredicate(format: "id = %@", model.id.uuidString)
+
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            let definition = result[0] as! NSManagedObject
+            managedContext.delete(definition)
+
+            try managedContext.save()
+
+        } catch let error as NSError {
+            print("Could not save \(error) , \(error.userInfo)")
+            completion(nil)
+        }
+        completion(model)
+    }
 }

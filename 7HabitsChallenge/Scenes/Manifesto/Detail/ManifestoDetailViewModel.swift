@@ -38,19 +38,26 @@ class ManifestoDetailViewModel {
     }
 
     typealias BindingFieldToView = (Field) -> ()
+    typealias BindingToView = () -> ()
 
     var bindingFields: BindingFieldToView?
+    var editModeBinding: BindingToView?
     var content: String
     var id: UUID
     var listOfAspect: [LifeThings.Aspect]!
     var action: Action!
+    typealias ChangeAction = (ManifestoViewModel.ManifestoItem) -> ()
 
-    init(with manifesto: ManifestoViewModel.ManifestoItem, action: Action, addAction: ChangeAction?) {
+    var addAction: ChangeAction?
+    var editAction: ChangeAction?
+
+    init(with manifesto: ManifestoViewModel.ManifestoItem, action: Action, addAction: ChangeAction? = nil, editAction: ChangeAction? = nil) {
         self.id = manifesto.id
         self.content = manifesto.content
         self.listOfAspect = manifesto.aspects
         self.action = action
         self.addAction = addAction
+        self.editAction = editAction
     }
 
     func onSelectField(_ field: Field) {
@@ -62,14 +69,24 @@ class ManifestoDetailViewModel {
         bindingFields?(field)
     }
 
-    typealias ChangeAction = (ManifestoViewModel.ManifestoItem) -> ()
-
-    var addAction: ChangeAction?
-
     func saveOrRestore() {
         if action == .new, let addAction = addAction {
             let newManifesto = ManifestoViewModel.ManifestoItem(id: id, content: content, aspects: listOfAspect)
             addAction(newManifesto)
+
+        } else if action == .edit, let editAction = editAction {
+            let updatedManifesto = ManifestoViewModel.ManifestoItem(id: id, content: content, aspects: listOfAspect)
+            editAction(updatedManifesto)
         }
+    }
+
+    func enabledEditMode() {
+        action = .edit
+        editModeBinding?()
+    }
+
+    func disabledEditMode() {
+        action = .view
+        editModeBinding?()
     }
 }

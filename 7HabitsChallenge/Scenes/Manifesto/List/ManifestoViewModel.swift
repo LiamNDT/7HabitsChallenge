@@ -8,6 +8,7 @@
 import Foundation
 
 class ManifestoViewModel {
+    // TODO: hanlder error on request
     enum Section {
         case main
     }
@@ -24,30 +25,45 @@ class ManifestoViewModel {
         var id: UUID
         var content: String
         var aspects: [LifeThings.Aspect]
-    }
 
-    typealias BindingToView = () -> ()
-
-    var binding: BindingToView?
-    var listOfManifesto: [ManifestoItem]? {
-        didSet {
-            binding?()
+        mutating func updateContentAndAspects(_ content: String?, _ aspects: [LifeThings.Aspect]?) {
+            if let content = content {
+                self.content = content
+            }
+            if let aspects = aspects {
+                self.aspects = aspects
+            }
         }
     }
 
+    enum Event {
+        case add, remove, update
+    }
+
+    typealias BindingToView = ([ManifestoItem], Event) -> ()
+
+    var binding: BindingToView?
+
+    var listOfManifesto: [ManifestoItem]
     var repository: DefinitionRepository
 
     init() {
         repository = DefinitionRepository()
-        // listOfManifesto = []
+        listOfManifesto = []
     }
 
     func fetch() {
         repository.retrieve { [unowned self] list in
-            if listOfManifesto == nil {
-                listOfManifesto = list
-            } else {
-                listOfManifesto?.append(contentsOf: list)
+            listOfManifesto.append(contentsOf: list)
+            binding?(list, .add)
+        }
+    }
+
+    func delete(item: ManifestoItem) {
+        repository.delete(item) { [unowned self] result in
+            if let deleted = result {
+                listOfManifesto.removeAll(where: { $0.id == deleted.id })
+                binding?([deleted], .remove)
             }
         }
     }
@@ -55,7 +71,18 @@ class ManifestoViewModel {
     func save(item: ManifestoItem) {
         repository.save(item) { [unowned self] result in
             if let addedManifesto = result {
-                listOfManifesto?.append(addedManifesto)
+                listOfManifesto.append(addedManifesto)
+                binding?([addedManifesto], .add)
+            }
+        }
+    }
+
+    func update(item: ManifestoItem) {
+        repository.update(item) { [unowned self] result in
+            if let updatedManifesto = result {
+                listOfManifesto = listOfManifesto.filter { $0.id != updatedManifesto.id }
+                listOfManifesto.append(updatedManifesto)
+                binding?([updatedManifesto], .update)
             }
         }
     }

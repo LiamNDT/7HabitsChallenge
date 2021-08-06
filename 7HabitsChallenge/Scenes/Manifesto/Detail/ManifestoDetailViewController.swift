@@ -45,6 +45,28 @@ class ManifestoDetailViewController: UITableViewController {
                 dataSource.apply(snapshot, animatingDifferences: true)
             }
         }
+
+        viewModel.editModeBinding = { [unowned self] in
+            configureNavigationBar()
+
+            var snapshot = dataSource.snapshot()
+
+            if viewModel.action == .edit {
+                let onlyAspect = snapshot.itemIdentifiers(inSection: .aspects).map { $0.aspect }
+                let newFields = LifeThings.Aspect.allCases.filter { $0 != .none && !onlyAspect.contains($0) }
+                    .map { ViewModel.Field(content: "", aspect: $0) }
+                snapshot.appendItems(newFields, toSection: .aspects)
+                snapshot.reloadSections([.content, .aspects])
+
+            } else if viewModel.action == .view {
+                snapshot.deleteItems(snapshot.itemIdentifiers.filter { $0.aspect != nil && !viewModel.listOfAspect.contains($0.aspect!) })
+                snapshot.reloadSections([.content, .aspects])
+            }
+
+            DispatchQueue.main.async { [unowned self] in
+                dataSource.apply(snapshot, animatingDifferences: true)
+            }
+        }
     }
 
     private func configureDataSource() {
@@ -80,7 +102,14 @@ class ManifestoDetailViewController: UITableViewController {
         var snapshot = NSDiffableDataSourceSnapshot<ViewModel.Section, ViewModel.Field>()
         snapshot.appendSections([.content, .aspects])
         snapshot.appendItems([ViewModel.Field(content: viewModel.content, aspect: nil)], toSection: .content)
-        snapshot.appendItems(LifeThings.Aspect.allCases.filter { $0 != .none }.map { ViewModel.Field(content: "", aspect: $0) }, toSection: .aspects)
+
+        if viewModel.action == .new || viewModel.action == .edit {
+            snapshot.appendItems(LifeThings.Aspect.allCases.filter { $0 != .none }.map { ViewModel.Field(content: "", aspect: $0) }, toSection: .aspects)
+
+        } else if viewModel.action == .view {
+            snapshot.appendItems(viewModel.listOfAspect.map { ViewModel.Field(content: "", aspect: $0) }, toSection: .aspects)
+        }
+
         DispatchQueue.main.async { [unowned self] in
             dataSource.apply(snapshot, animatingDifferences: true)
         }
@@ -89,6 +118,16 @@ class ManifestoDetailViewController: UITableViewController {
     private func configureNavigationBar() {
         if viewModel.action == .new {
             navigationItem.title = "Thêm mới"
+            navigationItem.leftBarButtonItem = cancelButton
+            navigationItem.rightBarButtonItem = doneButton
+
+        } else if viewModel.action == .view {
+            navigationItem.title = "Chi tiết"
+            navigationItem.leftBarButtonItem = nil
+            navigationItem.rightBarButtonItem = editlButton
+
+        } else if viewModel.action == .edit {
+            navigationItem.title = "Chỉnh sửa"
             navigationItem.leftBarButtonItem = cancelButton
             navigationItem.rightBarButtonItem = doneButton
         }
@@ -123,8 +162,7 @@ extension ManifestoDetailViewController {
             if field.aspect != nil {
                 viewModel.onSelectField(field)
                 view.endEditing(true)
-            }
-            else {
+            } else {
                 if let cell = tableView.cellForRow(at: indexPath) as? TextViewCell, !cell.textField.isFirstResponder {
                     cell.textField.becomeFirstResponder()
                 }
@@ -143,6 +181,9 @@ extension ManifestoDetailViewController {
     @objc func cancelAction(_ sender: UIBarButtonItem) {
         if viewModel.action == .new {
             dismiss(animated: true, completion: nil)
+
+        } else if viewModel.action == .edit {
+            viewModel.disabledEditMode()
         }
     }
 
@@ -150,5 +191,7 @@ extension ManifestoDetailViewController {
         viewModel.saveOrRestore()
     }
 
-    @objc func editAction(_ sender: UIBarButtonItem) {}
+    @objc func editAction(_ sender: UIBarButtonItem) {
+        viewModel.enabledEditMode()
+    }
 }
