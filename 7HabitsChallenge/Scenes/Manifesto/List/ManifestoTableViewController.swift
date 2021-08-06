@@ -90,8 +90,17 @@ class ManifestoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Xoá") { [unowned self] _, _, complete in
             if let delete = dataSource.itemIdentifier(for: indexPath) {
-                viewModel.delete(item: delete)
-                complete(true)
+                let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+                let cancelAction = UIAlertAction(title: "Huỷ", style: .cancel) { _ -> Void in }
+                let deleteAction = UIAlertAction(title: "Xoá", style: .destructive) { _ -> Void in
+                    viewModel.delete(item: delete)
+                }
+
+                actionSheetController.addAction(deleteAction)
+                actionSheetController.addAction(cancelAction)
+                present(actionSheetController, animated: true) {
+                    complete(true)
+                }
             }
 
             complete(false)
