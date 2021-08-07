@@ -60,7 +60,7 @@ extension PlanViewController {
         navigationItem.leftBarButtonItems = [backwardButton, switchDateButton, forwardButton]
         navigationItem.rightBarButtonItem = addButton
         navigationController?.navigationBar.tintColor = AppColor.primary
-        navigationItem.prompt = "Thứ 7, 07-T8-2021"
+        navigationItem.title = "Thg12 - 2021"
     }
 
     func configureHierachy() {
