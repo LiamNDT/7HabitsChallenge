@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="DefinitionLocal" representedClassName="DefinitionLocal" syncable="YES">
+    <entity name="DefinitionLocal" representedClassName="DefinitionLocal" syncable="YES" codeGenerationType="class">
         <attribute name="aspects" optional="YES" attributeType="String"/>
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="uTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="RoleLocal" representedClassName="RoleLocal" syncable="YES">
+    <entity name="RoleLocal" representedClassName="RoleLocal" syncable="YES" codeGenerationType="class">
         <attribute name="code" optional="YES" attributeType="String"/>
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="icon" optional="YES" attributeType="String"/>
@@ -15,7 +15,7 @@
         <attribute name="uTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="DefinitionLocal" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="RoleLocal" positionX="-63" positionY="9" width="128" height="119"/>
+        <element name="DefinitionLocal" positionX="-45" positionY="0" width="128" height="89"/>
+        <element name="RoleLocal" positionX="-18" positionY="27" width="128" height="119"/>
     </elements>
 </model>

@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		532F900726BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 532F900526BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld */; };
 		532F901226BA1BF1005E3C79 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F901126BA1BF1005E3C79 /* Date.swift */; };
-		532F901C26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F901A26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift */; };
-		532F901D26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F901B26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift */; };
 		537748C226BBB21A0035F654 /* ManifestoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C126BBB21A0035F654 /* ManifestoTableViewController.swift */; };
 		537748C426BBB22A0035F654 /* ManifestoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C326BBB22A0035F654 /* ManifestoDetailViewModel.swift */; };
 		537748C626BBB3730035F654 /* ManifestoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C526BBB3730035F654 /* ManifestoDetailViewController.swift */; };
@@ -20,6 +17,18 @@
 		539FC11826BE2B9800226E3A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11726BE2B9800226E3A /* ProfileTableViewController.swift */; };
 		539FC11A26BE2BA600226E3A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11926BE2BA600226E3A /* ProfileViewModel.swift */; };
 		539FC11D26BE2BE400226E3A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11C26BE2BE400226E3A /* BaseViewController.swift */; };
+		539FC12026BE45AC00226E3A /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11F26BE45AC00226E3A /* HomeCollectionViewController.swift */; };
+		539FC12226BE45C300226E3A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC12126BE45C300226E3A /* HomeViewModel.swift */; };
+		539FC12426BE552800226E3A /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC12326BE552800226E3A /* TopCollectionViewCell.swift */; };
+		539FC12926BE617900226E3A /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC12826BE617900226E3A /* PlanViewController.swift */; };
+		539FC12F26BE6D1A00226E3A /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC12E26BE6D1A00226E3A /* WeekViewModel.swift */; };
+		539FC13626BE7CBF00226E3A /* DayInWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC13526BE7CBF00226E3A /* DayInWeekView.swift */; };
+		539FC13926BE891900226E3A /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC13826BE891900226E3A /* TaskTableViewController.swift */; };
+		539FC13B26BE893000226E3A /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC13A26BE893000226E3A /* TaskViewModel.swift */; };
+		539FC14126BEAE6600226E3A /* RoleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC14026BEAE6600226E3A /* RoleTableViewController.swift */; };
+		539FC14326BEAE7B00226E3A /* RoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC14226BEAE7B00226E3A /* RoleViewModel.swift */; };
+		539FC14926BEB5ED00226E3A /* RoleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC14826BEB5ED00226E3A /* RoleRepository.swift */; };
+		539FC15C26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 539FC15A26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodeld */; };
 		53BEC82326B8A9FC004D667E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC82226B8A9FC004D667E /* AppDelegate.swift */; };
 		53BEC82526B8A9FC004D667E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC82426B8A9FC004D667E /* SceneDelegate.swift */; };
 		53BEC82C26B8A9FD004D667E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53BEC82B26B8A9FD004D667E /* Assets.xcassets */; };
@@ -45,10 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		532F900626BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SevenHabitsChallenge.xcdatamodel; sourceTree = "<group>"; };
 		532F901126BA1BF1005E3C79 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		532F901A26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionLocal+CoreDataClass.swift"; sourceTree = "<group>"; };
-		532F901B26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionLocal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		537748C126BBB21A0035F654 /* ManifestoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoTableViewController.swift; sourceTree = "<group>"; };
 		537748C326BBB22A0035F654 /* ManifestoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoDetailViewModel.swift; sourceTree = "<group>"; };
 		537748C526BBB3730035F654 /* ManifestoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoDetailViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,18 @@
 		539FC11726BE2B9800226E3A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		539FC11926BE2BA600226E3A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		539FC11C26BE2BE400226E3A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		539FC11F26BE45AC00226E3A /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		539FC12126BE45C300226E3A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		539FC12326BE552800226E3A /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
+		539FC12826BE617900226E3A /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		539FC12E26BE6D1A00226E3A /* WeekViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
+		539FC13526BE7CBF00226E3A /* DayInWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInWeekView.swift; sourceTree = "<group>"; };
+		539FC13826BE891900226E3A /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
+		539FC13A26BE893000226E3A /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		539FC14026BEAE6600226E3A /* RoleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleTableViewController.swift; sourceTree = "<group>"; };
+		539FC14226BEAE7B00226E3A /* RoleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleViewModel.swift; sourceTree = "<group>"; };
+		539FC14826BEB5ED00226E3A /* RoleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleRepository.swift; sourceTree = "<group>"; };
+		539FC15B26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SevenHabitsChallenges.xcdatamodel; sourceTree = "<group>"; };
 		53BEC81F26B8A9FC004D667E /* 7HabitsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 7HabitsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53BEC82226B8A9FC004D667E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53BEC82426B8A9FC004D667E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				537748CD26BBD3FB0035F654 /* DefinitionRepository.swift */,
+				539FC14826BEB5ED00226E3A /* RoleRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -133,9 +152,7 @@
 		537748CC26BBD3BF0035F654 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				532F901A26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift */,
-				532F901B26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift */,
-				532F900526BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld */,
+				539FC15A26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -155,6 +172,44 @@
 				539FC11C26BE2BE400226E3A /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		539FC11E26BE453000226E3A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				539FC11F26BE45AC00226E3A /* HomeCollectionViewController.swift */,
+				539FC12126BE45C300226E3A /* HomeViewModel.swift */,
+				539FC12326BE552800226E3A /* TopCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		539FC12726BE615C00226E3A /* Planning */ = {
+			isa = PBXGroup;
+			children = (
+				539FC13526BE7CBF00226E3A /* DayInWeekView.swift */,
+				539FC12826BE617900226E3A /* PlanViewController.swift */,
+				539FC12E26BE6D1A00226E3A /* WeekViewModel.swift */,
+			);
+			path = Planning;
+			sourceTree = "<group>";
+		};
+		539FC13726BE88FF00226E3A /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				539FC13826BE891900226E3A /* TaskTableViewController.swift */,
+				539FC13A26BE893000226E3A /* TaskViewModel.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		539FC13F26BEAE5400226E3A /* Roles */ = {
+			isa = PBXGroup;
+			children = (
+				539FC14026BEAE6600226E3A /* RoleTableViewController.swift */,
+				539FC14226BEAE7B00226E3A /* RoleViewModel.swift */,
+			);
+			path = Roles;
 			sourceTree = "<group>";
 		};
 		53BEC81626B8A9FC004D667E = {
@@ -223,9 +278,13 @@
 		53BEC83A26B8AC77004D667E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				539FC11626BE2B8A00226E3A /* Profile */,
-				537748C026BBB2090035F654 /* Manifesto */,
+				539FC11E26BE453000226E3A /* Home */,
 				53BEC86D26B8D27C004D667E /* LifeAspectToValues */,
+				537748C026BBB2090035F654 /* Manifesto */,
+				539FC12726BE615C00226E3A /* Planning */,
+				539FC11626BE2B8A00226E3A /* Profile */,
+				539FC13F26BEAE5400226E3A /* Roles */,
+				539FC13726BE88FF00226E3A /* Task */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -314,6 +373,8 @@
 			dependencies = (
 			);
 			name = 7HabitsChallenge;
+			packageProductDependencies = (
+			);
 			productName = 7HabitsChallenge;
 			productReference = 53BEC81F26B8A9FC004D667E /* 7HabitsChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -341,6 +402,8 @@
 				Base,
 			);
 			mainGroup = 53BEC81626B8A9FC004D667E;
+			packageReferences = (
+			);
 			productRefGroup = 53BEC82026B8A9FC004D667E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,39 +430,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539FC12426BE552800226E3A /* TopCollectionViewCell.swift in Sources */,
+				539FC13B26BE893000226E3A /* TaskViewModel.swift in Sources */,
+				539FC12926BE617900226E3A /* PlanViewController.swift in Sources */,
 				537748CE26BBD3FB0035F654 /* DefinitionRepository.swift in Sources */,
 				537748CA26BBBA530035F654 /* TextViewCell.swift in Sources */,
 				539FC11D26BE2BE400226E3A /* BaseViewController.swift in Sources */,
 				53BEC86F26B8D28B004D667E /* LifeAspectToValuesTableVC.swift in Sources */,
 				53BEC82326B8A9FC004D667E /* AppDelegate.swift in Sources */,
+				539FC14326BEAE7B00226E3A /* RoleViewModel.swift in Sources */,
 				537748C426BBB22A0035F654 /* ManifestoDetailViewModel.swift in Sources */,
-				532F901C26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift in Sources */,
+				539FC12026BE45AC00226E3A /* HomeCollectionViewController.swift in Sources */,
 				53BEC84126B8AD69004D667E /* AppFont.swift in Sources */,
 				53BEC87126B8D2A3004D667E /* LifeAspectToValueVM.swift in Sources */,
 				537748C626BBB3730035F654 /* ManifestoDetailViewController.swift in Sources */,
 				53BEC84026B8AD69004D667E /* AppColor.swift in Sources */,
 				537748D026BBE97C0035F654 /* ManifestoViewModel.swift in Sources */,
-				532F900726BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld in Sources */,
 				53BEC86826B8B919004D667E /* DataSource+Form.swift in Sources */,
 				53BEC85726B8ADFE004D667E /* UIView.swift in Sources */,
 				539FC11A26BE2BA600226E3A /* ProfileViewModel.swift in Sources */,
-				532F901D26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift in Sources */,
 				53BEC85426B8ADFE004D667E /* KeychainWrapperProtocols.swift in Sources */,
 				53BEC86C26B8C779004D667E /* TextFieldCell.swift in Sources */,
 				539FC11826BE2B9800226E3A /* ProfileTableViewController.swift in Sources */,
 				53BEC85326B8ADFE004D667E /* KeychainWrapperError.swift in Sources */,
 				53BEC85226B8ADFE004D667E /* Logger.swift in Sources */,
+				539FC12226BE45C300226E3A /* HomeViewModel.swift in Sources */,
 				53BEC82526B8A9FC004D667E /* SceneDelegate.swift in Sources */,
 				53BEC85B26B8ADFE004D667E /* UINavigationController.swift in Sources */,
+				539FC14126BEAE6600226E3A /* RoleTableViewController.swift in Sources */,
 				53BEC85826B8ADFE004D667E /* UIColor.swift in Sources */,
 				53BEC85D26B8AE3E004D667E /* CGFloat.swift in Sources */,
 				53BEC83C26B8ACC2004D667E /* RootViewController.swift in Sources */,
 				53BEC85626B8ADFE004D667E /* UIScrollView.swift in Sources */,
+				539FC12F26BE6D1A00226E3A /* WeekViewModel.swift in Sources */,
+				539FC13626BE7CBF00226E3A /* DayInWeekView.swift in Sources */,
 				532F901226BA1BF1005E3C79 /* Date.swift in Sources */,
 				53BEC85526B8ADFE004D667E /* KeychainWrapper.swift in Sources */,
 				53BEC85926B8ADFE004D667E /* UITableView.swift in Sources */,
 				537748C226BBB21A0035F654 /* ManifestoTableViewController.swift in Sources */,
+				539FC15C26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodeld in Sources */,
+				539FC14926BEB5ED00226E3A /* RoleRepository.swift in Sources */,
 				53BEC85A26B8ADFE004D667E /* UIViewController.swift in Sources */,
+				539FC13926BE891900226E3A /* TaskTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -523,7 +595,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -595,13 +667,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		532F900526BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld */ = {
+		539FC15A26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				532F900626BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodel */,
+				539FC15B26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodel */,
 			);
-			currentVersion = 532F900626BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodel */;
-			path = SevenHabitsChallenge.xcdatamodeld;
+			currentVersion = 539FC15B26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodel */;
+			path = SevenHabitsChallenges.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

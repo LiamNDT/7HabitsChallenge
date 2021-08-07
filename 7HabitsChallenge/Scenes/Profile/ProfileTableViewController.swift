@@ -26,6 +26,13 @@ class ProfileTableViewController: UITableViewController {
         if item.group == .profile, indexPath.row == 1 { // Tuyên ngôn
             let vc = ManifestoTableViewController(style: .grouped)
             navigationController?.pushViewController(vc, animated: true)
+            return
+        }
+
+        if item.group == .profile, indexPath.row == 2 { // Vai trò
+            let vc = RoleTableViewController(style: .grouped)
+            navigationController?.pushViewController(vc, animated: true)
+            return
         }
     }
 }
@@ -33,6 +40,7 @@ class ProfileTableViewController: UITableViewController {
 extension ProfileTableViewController: ScreenConfiguration {
     func configureNavigationBar() {
         navigationItem.title = "Hồ sơ"
+        navigationController?.navigationBar.tintColor = AppColor.primary
     }
 
     func configureDataSource() {

@@ -16,10 +16,10 @@ class RootViewController: UITabBarController {
     }
 
     private func configureTabs() {
-        let tab0 = UINavigationController(rootViewController: UIViewController())
+        let tab0 = UINavigationController(rootViewController: HomeCollectionViewController(collectionViewLayout: HomeCollectionViewController.createLayout()))
         tab0.tabBarItem = UITabBarItem(title: "Trang chủ", image: UIImage(systemName: "house"), tag: 0)
 
-        let tab1 = UINavigationController(rootViewController: UIViewController())
+        let tab1 = UINavigationController(rootViewController: PlanViewController())
         tab1.tabBarItem = UITabBarItem(title: "Kế hoạch", image: UIImage(systemName: "calendar"), tag: 1)
 
         let tab2 = UINavigationController(rootViewController: ProfileTableViewController(style: .grouped))

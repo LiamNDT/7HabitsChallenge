@@ -11,6 +11,30 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let rolesCheck = "role_has_data"
+        if !UserDefaults.standard.bool(forKey: rolesCheck) {
+            let roleRepository = RoleRepository()
+            roleRepository.retrieve { list in
+                if list.isEmpty {
+                    let defaultRoles: [RoleViewModel.Item] = [
+                        RoleViewModel.Item(id: UUID(), code: "SELF", name: "Chính mình", content: "", icon: "leaf.fill"),
+                        RoleViewModel.Item(id: UUID(), code: "FATHER", name: "Người cha", content: "", icon: "bolt.circle.fill"),
+                        RoleViewModel.Item(id: UUID(), code: "HUSBAN", name: "Người chồng", content: "", icon: "heart.circle"),
+                        RoleViewModel.Item(id: UUID(), code: "LEADERSHIP", name: "Lãnh đạo", content: "", icon: "paperplane.circle"),
+                        RoleViewModel.Item(id: UUID(), code: "EMPLOYEE", name: "Nhân viên", content: "", icon: "briefcase.fill"),
+                        RoleViewModel.Item(id: UUID(), code: "SON", name: "Con trai", content: "", icon: "star.circle.fill"),
+                        RoleViewModel.Item(id: UUID(), code: "DISCOVERY", name: "Nhà thám hiểm", content: "", icon: "network"),
+                        RoleViewModel.Item(id: UUID(), code: "WRITER", name: "Nhà văn", content: "", icon: "book.circle"),
+                        RoleViewModel.Item(id: UUID(), code: "PLAYER", name: "Vận động viên", content: "", icon: "sportscourt"),
+                        RoleViewModel.Item(id: UUID(), code: "SINGER", name: "Ca sĩ", content: "", icon: "music.mic"),
+                        RoleViewModel.Item(id: UUID(), code: "BUSINESS_MEN", name: "Doanh nhân", content: "", icon: "dollarsign.circle")
+                    ]
+                    roleRepository.saveAll(defaultRoles) {
+                        UserDefaults.standard.setValue(true, forKey: rolesCheck)
+                    }
+                }
+            }
+        }
         return true
     }
 
@@ -37,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           application to it. This property is optional since there are legitimate
           error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentCloudKitContainer(name: "SevenHabitsChallenge")
+        let container = NSPersistentCloudKitContainer(name: "SevenHabitsChallenges")
         container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
