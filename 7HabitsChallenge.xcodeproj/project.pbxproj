@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		532F900426BA0F62005E3C79 /* DefinitionListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F900326BA0F62005E3C79 /* DefinitionListDataSource.swift */; };
 		532F900726BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 532F900526BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld */; };
 		532F901226BA1BF1005E3C79 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F901126BA1BF1005E3C79 /* Date.swift */; };
 		532F901C26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F901A26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift */; };
@@ -18,6 +17,9 @@
 		537748CA26BBBA530035F654 /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C926BBBA530035F654 /* TextViewCell.swift */; };
 		537748CE26BBD3FB0035F654 /* DefinitionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748CD26BBD3FB0035F654 /* DefinitionRepository.swift */; };
 		537748D026BBE97C0035F654 /* ManifestoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748CF26BBE97C0035F654 /* ManifestoViewModel.swift */; };
+		539FC11826BE2B9800226E3A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11726BE2B9800226E3A /* ProfileTableViewController.swift */; };
+		539FC11A26BE2BA600226E3A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11926BE2BA600226E3A /* ProfileViewModel.swift */; };
+		539FC11D26BE2BE400226E3A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11C26BE2BE400226E3A /* BaseViewController.swift */; };
 		53BEC82326B8A9FC004D667E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC82226B8A9FC004D667E /* AppDelegate.swift */; };
 		53BEC82526B8A9FC004D667E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC82426B8A9FC004D667E /* SceneDelegate.swift */; };
 		53BEC82C26B8A9FD004D667E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53BEC82B26B8A9FD004D667E /* Assets.xcassets */; };
@@ -25,7 +27,6 @@
 		53BEC83C26B8ACC2004D667E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC83B26B8ACC2004D667E /* RootViewController.swift */; };
 		53BEC84026B8AD69004D667E /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC83E26B8AD69004D667E /* AppColor.swift */; };
 		53BEC84126B8AD69004D667E /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC83F26B8AD69004D667E /* AppFont.swift */; };
-		53BEC84426B8AD98004D667E /* DefinitionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC84326B8AD98004D667E /* DefinitionListViewController.swift */; };
 		53BEC85226B8ADFE004D667E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC84626B8ADFE004D667E /* Logger.swift */; };
 		53BEC85326B8ADFE004D667E /* KeychainWrapperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC84826B8ADFE004D667E /* KeychainWrapperError.swift */; };
 		53BEC85426B8ADFE004D667E /* KeychainWrapperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC84926B8ADFE004D667E /* KeychainWrapperProtocols.swift */; };
@@ -37,9 +38,6 @@
 		53BEC85A26B8ADFE004D667E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC85026B8ADFE004D667E /* UIViewController.swift */; };
 		53BEC85B26B8ADFE004D667E /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC85126B8ADFE004D667E /* UINavigationController.swift */; };
 		53BEC85D26B8AE3E004D667E /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC85C26B8AE3E004D667E /* CGFloat.swift */; };
-		53BEC85F26B8B00C004D667E /* DefinitionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC85E26B8B00C004D667E /* DefinitionDetailViewController.swift */; };
-		53BEC86126B8B7C0004D667E /* DefinitionDetailViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC86026B8B7C0004D667E /* DefinitionDetailViewDataSource.swift */; };
-		53BEC86526B8B870004D667E /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC86426B8B870004D667E /* Definition.swift */; };
 		53BEC86826B8B919004D667E /* DataSource+Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC86726B8B919004D667E /* DataSource+Form.swift */; };
 		53BEC86C26B8C779004D667E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC86B26B8C779004D667E /* TextFieldCell.swift */; };
 		53BEC86F26B8D28B004D667E /* LifeAspectToValuesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BEC86E26B8D28B004D667E /* LifeAspectToValuesTableVC.swift */; };
@@ -47,7 +45,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		532F900326BA0F62005E3C79 /* DefinitionListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionListDataSource.swift; sourceTree = "<group>"; };
 		532F900626BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SevenHabitsChallenge.xcdatamodel; sourceTree = "<group>"; };
 		532F901126BA1BF1005E3C79 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		532F901A26BA213F005E3C79 /* DefinitionLocal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionLocal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -58,6 +55,9 @@
 		537748C926BBBA530035F654 /* TextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
 		537748CD26BBD3FB0035F654 /* DefinitionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionRepository.swift; sourceTree = "<group>"; };
 		537748CF26BBE97C0035F654 /* ManifestoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoViewModel.swift; sourceTree = "<group>"; };
+		539FC11726BE2B9800226E3A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		539FC11926BE2BA600226E3A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		539FC11C26BE2BE400226E3A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		53BEC81F26B8A9FC004D667E /* 7HabitsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 7HabitsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53BEC82226B8A9FC004D667E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53BEC82426B8A9FC004D667E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +67,6 @@
 		53BEC83B26B8ACC2004D667E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		53BEC83E26B8AD69004D667E /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		53BEC83F26B8AD69004D667E /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
-		53BEC84326B8AD98004D667E /* DefinitionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionListViewController.swift; sourceTree = "<group>"; };
 		53BEC84626B8ADFE004D667E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		53BEC84826B8ADFE004D667E /* KeychainWrapperError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapperError.swift; sourceTree = "<group>"; };
 		53BEC84926B8ADFE004D667E /* KeychainWrapperProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapperProtocols.swift; sourceTree = "<group>"; };
@@ -79,9 +78,6 @@
 		53BEC85026B8ADFE004D667E /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		53BEC85126B8ADFE004D667E /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		53BEC85C26B8AE3E004D667E /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
-		53BEC85E26B8B00C004D667E /* DefinitionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionDetailViewController.swift; sourceTree = "<group>"; };
-		53BEC86026B8B7C0004D667E /* DefinitionDetailViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionDetailViewDataSource.swift; sourceTree = "<group>"; };
-		53BEC86426B8B870004D667E /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
 		53BEC86726B8B919004D667E /* DataSource+Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSource+Form.swift"; sourceTree = "<group>"; };
 		53BEC86B26B8C779004D667E /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		53BEC86E26B8D28B004D667E /* LifeAspectToValuesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeAspectToValuesTableVC.swift; sourceTree = "<group>"; };
@@ -99,24 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		532F900126BA0F47005E3C79 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				532F900326BA0F62005E3C79 /* DefinitionListDataSource.swift */,
-				53BEC84326B8AD98004D667E /* DefinitionListViewController.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		532F900226BA0F4C005E3C79 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				53BEC85E26B8B00C004D667E /* DefinitionDetailViewController.swift */,
-				53BEC86026B8B7C0004D667E /* DefinitionDetailViewDataSource.swift */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		537748C026BBB2090035F654 /* Manifesto */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +140,23 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		539FC11626BE2B8A00226E3A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				539FC11726BE2B9800226E3A /* ProfileTableViewController.swift */,
+				539FC11926BE2BA600226E3A /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		539FC11B26BE2BCB00226E3A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				539FC11C26BE2BE400226E3A /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		53BEC81626B8A9FC004D667E = {
 			isa = PBXGroup;
 			children = (
@@ -196,8 +191,8 @@
 			children = (
 				53BEC83026B8A9FD004D667E /* Info.plist */,
 				53BEC82226B8A9FC004D667E /* AppDelegate.swift */,
-				53BEC83B26B8ACC2004D667E /* RootViewController.swift */,
 				53BEC82426B8A9FC004D667E /* SceneDelegate.swift */,
+				53BEC83B26B8ACC2004D667E /* RootViewController.swift */,
 				53BEC82B26B8A9FD004D667E /* Assets.xcassets */,
 				53BEC82D26B8A9FD004D667E /* LaunchScreen.storyboard */,
 			);
@@ -207,6 +202,7 @@
 		53BEC83726B8AC65004D667E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				539FC11B26BE2BCB00226E3A /* Base */,
 				53BEC83D26B8AD37004D667E /* Color&Font */,
 				53BEC86626B8B901004D667E /* DataSource */,
 				53BEC84B26B8ADFE004D667E /* Extensions */,
@@ -227,9 +223,9 @@
 		53BEC83A26B8AC77004D667E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				539FC11626BE2B8A00226E3A /* Profile */,
 				537748C026BBB2090035F654 /* Manifesto */,
 				53BEC86D26B8D27C004D667E /* LifeAspectToValues */,
-				53BEC84226B8AD7E004D667E /* Definition */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -241,16 +237,6 @@
 				53BEC83F26B8AD69004D667E /* AppFont.swift */,
 			);
 			path = "Color&Font";
-			sourceTree = "<group>";
-		};
-		53BEC84226B8AD7E004D667E /* Definition */ = {
-			isa = PBXGroup;
-			children = (
-				53BEC86426B8B870004D667E /* Definition.swift */,
-				532F900226BA0F4C005E3C79 /* Detail */,
-				532F900126BA0F47005E3C79 /* List */,
-			);
-			path = Definition;
 			sourceTree = "<group>";
 		};
 		53BEC84526B8ADFE004D667E /* Logging */ = {
@@ -383,6 +369,7 @@
 			files = (
 				537748CE26BBD3FB0035F654 /* DefinitionRepository.swift in Sources */,
 				537748CA26BBBA530035F654 /* TextViewCell.swift in Sources */,
+				539FC11D26BE2BE400226E3A /* BaseViewController.swift in Sources */,
 				53BEC86F26B8D28B004D667E /* LifeAspectToValuesTableVC.swift in Sources */,
 				53BEC82326B8A9FC004D667E /* AppDelegate.swift in Sources */,
 				537748C426BBB22A0035F654 /* ManifestoDetailViewModel.swift in Sources */,
@@ -390,19 +377,16 @@
 				53BEC84126B8AD69004D667E /* AppFont.swift in Sources */,
 				53BEC87126B8D2A3004D667E /* LifeAspectToValueVM.swift in Sources */,
 				537748C626BBB3730035F654 /* ManifestoDetailViewController.swift in Sources */,
-				53BEC84426B8AD98004D667E /* DefinitionListViewController.swift in Sources */,
 				53BEC84026B8AD69004D667E /* AppColor.swift in Sources */,
-				53BEC86526B8B870004D667E /* Definition.swift in Sources */,
-				532F900426BA0F62005E3C79 /* DefinitionListDataSource.swift in Sources */,
 				537748D026BBE97C0035F654 /* ManifestoViewModel.swift in Sources */,
 				532F900726BA16CD005E3C79 /* SevenHabitsChallenge.xcdatamodeld in Sources */,
-				53BEC86126B8B7C0004D667E /* DefinitionDetailViewDataSource.swift in Sources */,
 				53BEC86826B8B919004D667E /* DataSource+Form.swift in Sources */,
 				53BEC85726B8ADFE004D667E /* UIView.swift in Sources */,
+				539FC11A26BE2BA600226E3A /* ProfileViewModel.swift in Sources */,
 				532F901D26BA213F005E3C79 /* DefinitionLocal+CoreDataProperties.swift in Sources */,
 				53BEC85426B8ADFE004D667E /* KeychainWrapperProtocols.swift in Sources */,
 				53BEC86C26B8C779004D667E /* TextFieldCell.swift in Sources */,
-				53BEC85F26B8B00C004D667E /* DefinitionDetailViewController.swift in Sources */,
+				539FC11826BE2B9800226E3A /* ProfileTableViewController.swift in Sources */,
 				53BEC85326B8ADFE004D667E /* KeychainWrapperError.swift in Sources */,
 				53BEC85226B8ADFE004D667E /* Logger.swift in Sources */,
 				53BEC82526B8A9FC004D667E /* SceneDelegate.swift in Sources */,
