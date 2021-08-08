@@ -12,7 +12,7 @@ class ProfileTableViewController: UITableViewController {
     let headerReuseIdentifier = "ProfileTableHeaderReuseIdentifier"
 
     typealias VM = ProfileViewModel
-    lazy var viewModel = ProfileViewModel()
+    var viewModel = ProfileViewModel()
 
     var dataSource: UITableViewDiffableDataSource<VM.Section, VM.Item>!
 
@@ -24,10 +24,15 @@ class ProfileTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let section = VM.Section(rawValue: section) else { return nil }
+        guard let section = VM.Section(rawValue: section), section != .profile else { return nil }
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerReuseIdentifier)
         header?.textLabel?.text = section.label.uppercased()
         return header
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard let section = VM.Section(rawValue: section), section != .profile else { return 0 }
+        return tableView.sectionHeaderHeight
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -66,7 +71,8 @@ extension ProfileTableViewController: ScreenConfiguration {
             if !item.subTitle.isEmpty {
                 content.secondaryText = item.subTitle
             }
-            cell.accessoryType = item.isNav ? .disclosureIndicator : .none
+            cell.tintColor = AppColor.primary
+            cell.contentConfiguration = content
 
             if let itemData = viewModel.menu.filter({ item.id == $0.id }).first, itemData.toggle != nil {
                 let switchView = UISwitch(frame: .zero)
@@ -74,10 +80,11 @@ extension ProfileTableViewController: ScreenConfiguration {
                 switchView.tag = indexPath.row
                 switchView.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
                 cell.accessoryView = switchView
+                cell.accessoryType = .none
+            } else {
+                cell.accessoryView = nil
+                cell.accessoryType = item.isNav ? .disclosureIndicator : .none
             }
-
-            cell.tintColor = AppColor.primary
-            cell.contentConfiguration = content
 
             return cell
         })
