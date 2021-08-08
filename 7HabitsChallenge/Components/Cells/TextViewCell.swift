@@ -46,7 +46,7 @@ extension TextViewCell {
 
 extension TextViewCell: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if let originalText = textField.text {
+        if let originalText = textView.text {
             let content = (originalText as NSString).replacingCharacters(in: range, with: text)
             changedAction?(content)
         }

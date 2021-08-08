@@ -87,7 +87,48 @@ class RoleRepository {
         completion(listOfModel)
     }
 
-    deinit {
-        print("deinit role repository")
+    func update(_ model: RoleViewModel.Item, completion: @escaping (RoleViewModel.Item?) -> Void) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityNamed)
+        fetchRequest.predicate = NSPredicate(format: "id = %@", model.id.uuidString)
+
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            let role = result[0] as! NSManagedObject
+            role.setValue(model.name, forKey: "name")
+            role.setValue(model.content, forKey: "content")
+            role.setValue(model.code, forKey: "code")
+            role.setValue(Date().toMillis(), forKey: "uTimestamp")
+
+            try managedContext.save()
+
+        } catch let error as NSError {
+            print("Could not save \(error) , \(error.userInfo)")
+            completion(nil)
+        }
+        completion(model)
+    }
+
+    func delete(_ model: RoleViewModel.Item, completion: @escaping (RoleViewModel.Item?) -> Void) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityNamed)
+        fetchRequest.predicate = NSPredicate(format: "id = %@", model.id.uuidString)
+
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            let definition = result[0] as! NSManagedObject
+            managedContext.delete(definition)
+
+            try managedContext.save()
+
+        } catch let error as NSError {
+            print("Could not save \(error) , \(error.userInfo)")
+            completion(nil)
+        }
+        completion(model)
     }
 }

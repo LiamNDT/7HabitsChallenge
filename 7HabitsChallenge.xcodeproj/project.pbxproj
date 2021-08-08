@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530D08A826BF911000E9025D /* RoleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530D08A726BF911000E9025D /* RoleDetailViewController.swift */; };
+		530D08AA26BF914000E9025D /* RoleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530D08A926BF914000E9025D /* RoleDetailViewModel.swift */; };
 		532F901226BA1BF1005E3C79 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F901126BA1BF1005E3C79 /* Date.swift */; };
 		537748C226BBB21A0035F654 /* ManifestoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C126BBB21A0035F654 /* ManifestoTableViewController.swift */; };
 		537748C426BBB22A0035F654 /* ManifestoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C326BBB22A0035F654 /* ManifestoDetailViewModel.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		530D08A726BF911000E9025D /* RoleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleDetailViewController.swift; sourceTree = "<group>"; };
+		530D08A926BF914000E9025D /* RoleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleDetailViewModel.swift; sourceTree = "<group>"; };
 		532F901126BA1BF1005E3C79 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		537748C126BBB21A0035F654 /* ManifestoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoTableViewController.swift; sourceTree = "<group>"; };
 		537748C326BBB22A0035F654 /* ManifestoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoDetailViewModel.swift; sourceTree = "<group>"; };
@@ -116,28 +120,12 @@
 		537748C026BBB2090035F654 /* Manifesto */ = {
 			isa = PBXGroup;
 			children = (
-				537748C826BBB4860035F654 /* Detail */,
-				537748C726BBB4800035F654 /* List */,
-			);
-			path = Manifesto;
-			sourceTree = "<group>";
-		};
-		537748C726BBB4800035F654 /* List */ = {
-			isa = PBXGroup;
-			children = (
+				537748C526BBB3730035F654 /* ManifestoDetailViewController.swift */,
+				537748C326BBB22A0035F654 /* ManifestoDetailViewModel.swift */,
 				537748C126BBB21A0035F654 /* ManifestoTableViewController.swift */,
 				537748CF26BBE97C0035F654 /* ManifestoViewModel.swift */,
 			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		537748C826BBB4860035F654 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				537748C526BBB3730035F654 /* ManifestoDetailViewController.swift */,
-				537748C326BBB22A0035F654 /* ManifestoDetailViewModel.swift */,
-			);
-			path = Detail;
+			path = Manifesto;
 			sourceTree = "<group>";
 		};
 		537748CB26BBD3A10035F654 /* Repository */ = {
@@ -206,6 +194,8 @@
 		539FC13F26BEAE5400226E3A /* Roles */ = {
 			isa = PBXGroup;
 			children = (
+				530D08A726BF911000E9025D /* RoleDetailViewController.swift */,
+				530D08A926BF914000E9025D /* RoleDetailViewModel.swift */,
 				539FC14026BEAE6600226E3A /* RoleTableViewController.swift */,
 				539FC14226BEAE7B00226E3A /* RoleViewModel.swift */,
 			);
@@ -431,9 +421,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				539FC12426BE552800226E3A /* TopCollectionViewCell.swift in Sources */,
+				530D08A826BF911000E9025D /* RoleDetailViewController.swift in Sources */,
 				539FC13B26BE893000226E3A /* TaskViewModel.swift in Sources */,
 				539FC12926BE617900226E3A /* PlanViewController.swift in Sources */,
 				537748CE26BBD3FB0035F654 /* DefinitionRepository.swift in Sources */,
+				530D08AA26BF914000E9025D /* RoleDetailViewModel.swift in Sources */,
 				537748CA26BBBA530035F654 /* TextViewCell.swift in Sources */,
 				539FC11D26BE2BE400226E3A /* BaseViewController.swift in Sources */,
 				53BEC86F26B8D28B004D667E /* LifeAspectToValuesTableVC.swift in Sources */,

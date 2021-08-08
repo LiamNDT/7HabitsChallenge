@@ -131,15 +131,12 @@ class ManifestoDetailViewController: UITableViewController {
             navigationItem.leftBarButtonItem = cancelButton
             navigationItem.rightBarButtonItem = doneButton
         }
+        navigationController?.navigationBar.tintColor = AppColor.primary
     }
 
     lazy var cancelButton = UIBarButtonItem(title: "Huỷ", style: .plain, target: self, action: #selector(cancelAction))
     lazy var doneButton = UIBarButtonItem(title: "Xong", style: .plain, target: self, action: #selector(doneAction))
     lazy var editlButton = UIBarButtonItem(title: "Sửa", style: .plain, target: self, action: #selector(editAction))
-
-    deinit {
-        print("No cycle on Detail")
-    }
 }
 
 extension ManifestoDetailViewController {
