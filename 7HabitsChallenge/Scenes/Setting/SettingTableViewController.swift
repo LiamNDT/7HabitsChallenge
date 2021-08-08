@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ProfileTableViewController: UITableViewController {
+class SettingTableViewController: UITableViewController {
     let cellReuseIdentifier = "ProfileTableCellReuseIdentifier"
     let headerReuseIdentifier = "ProfileTableHeaderReuseIdentifier"
 
-    typealias VM = ProfileViewModel
-    var viewModel = ProfileViewModel()
+    typealias VM = SettingViewModel
+    var viewModel = SettingViewModel()
 
     var dataSource: UITableViewDiffableDataSource<VM.Section, VM.Item>!
 
@@ -52,7 +52,7 @@ class ProfileTableViewController: UITableViewController {
     }
 }
 
-extension ProfileTableViewController: ScreenConfiguration {
+extension SettingTableViewController: ScreenConfiguration {
     func configureNavigationBar() {
         navigationItem.title = "Hồ sơ"
         navigationController?.navigationBar.tintColor = AppColor.primary
@@ -104,6 +104,6 @@ extension ProfileTableViewController: ScreenConfiguration {
     func configureBinding() {}
 }
 
-extension ProfileTableViewController {
+extension SettingTableViewController {
     @objc func switchChanged(_ sender: UISwitch) {}
 }

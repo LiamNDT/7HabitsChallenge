@@ -22,7 +22,7 @@ class RootViewController: UITabBarController {
         let tab1 = UINavigationController(rootViewController: PlanViewController())
         tab1.tabBarItem = UITabBarItem(title: "Kế hoạch", image: UIImage(systemName: "calendar"), tag: 1)
 
-        let tab2 = UINavigationController(rootViewController: ProfileTableViewController(style: .grouped))
+        let tab2 = UINavigationController(rootViewController: SettingTableViewController(style: .grouped))
         tab2.tabBarItem = UITabBarItem(title: "Hồ sơ", image: UIImage(systemName: "person.crop.circle"), tag: 2)
 
         viewControllers = [tab0, tab1, tab2]

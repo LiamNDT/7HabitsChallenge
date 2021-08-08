@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewModel {
+class SettingViewModel {
     enum Section: Int, CaseIterable {
         case profile, featured, habits, info
         var label: String {
