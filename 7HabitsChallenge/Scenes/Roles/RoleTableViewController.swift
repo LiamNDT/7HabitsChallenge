@@ -37,12 +37,15 @@ class RoleTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let roleSnapshot = dataSource.itemIdentifier(for: indexPath),
               let role = viewModel.listOfRole.first(where: { $0.id == roleSnapshot.id }) else { return }
+        // Modify: check logic: in blacklist?
+        //if not in {
         let detailModel = RoleDetailViewModel(role: role, action: .view, editAction: { [unowned self] edited in
             viewModel.update(item: edited)
             navigationController?.popViewController(animated: true)
         })
         let detailVC = RoleDetailViewController(viewModel: detailModel, style: .grouped)
         navigationController?.pushViewController(detailVC, animated: true)
+        //} else{alrt}
     }
     
     @objc func addRole(_ sender: UIBarButtonItem) {

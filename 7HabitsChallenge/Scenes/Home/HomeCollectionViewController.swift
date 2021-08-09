@@ -30,7 +30,7 @@ extension HomeCollectionViewController: ScreenConfiguration {
     func configureDataSource() {
         collectionView.backgroundColor = AppColor.background
         collectionView.register(TopCollectionViewCell.self, forCellWithReuseIdentifier: TopCollectionViewCell.reuseIdentifier)
-        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { [unowned self] collectionView, indexPath, item in
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             guard let section = VM.Section(rawValue: indexPath.section) else { return nil }
             if section == .main {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopCollectionViewCell.reuseIdentifier, for: indexPath) as! TopCollectionViewCell

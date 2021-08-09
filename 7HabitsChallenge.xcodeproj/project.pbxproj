@@ -16,6 +16,12 @@
 		537748CA26BBBA530035F654 /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748C926BBBA530035F654 /* TextViewCell.swift */; };
 		537748CE26BBD3FB0035F654 /* DefinitionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748CD26BBD3FB0035F654 /* DefinitionRepository.swift */; };
 		537748D026BBE97C0035F654 /* ManifestoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537748CF26BBE97C0035F654 /* ManifestoViewModel.swift */; };
+		5396B79526C032230056393C /* RoleCleanModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396B79426C032230056393C /* RoleCleanModule.swift */; };
+		5396B79726C033A40056393C /* RoleCleanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396B79626C033A40056393C /* RoleCleanView.swift */; };
+		5396B79926C033D00056393C /* RoleCleanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396B79826C033D00056393C /* RoleCleanPresenter.swift */; };
+		5396B79B26C035F70056393C /* RoleCleanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396B79A26C035F70056393C /* RoleCleanRouter.swift */; };
+		5396B79D26C036010056393C /* RoleCleanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396B79C26C036010056393C /* RoleCleanInteractor.swift */; };
+		5396B7A026C041CB0056393C /* RoleCleanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396B79F26C041CB0056393C /* RoleCleanRepository.swift */; };
 		539FC11826BE2B9800226E3A /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11726BE2B9800226E3A /* SettingTableViewController.swift */; };
 		539FC11A26BE2BA600226E3A /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11926BE2BA600226E3A /* SettingViewModel.swift */; };
 		539FC11D26BE2BE400226E3A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FC11C26BE2BE400226E3A /* BaseViewController.swift */; };
@@ -65,6 +71,12 @@
 		537748C926BBBA530035F654 /* TextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
 		537748CD26BBD3FB0035F654 /* DefinitionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionRepository.swift; sourceTree = "<group>"; };
 		537748CF26BBE97C0035F654 /* ManifestoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestoViewModel.swift; sourceTree = "<group>"; };
+		5396B79426C032230056393C /* RoleCleanModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCleanModule.swift; sourceTree = "<group>"; };
+		5396B79626C033A40056393C /* RoleCleanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCleanView.swift; sourceTree = "<group>"; };
+		5396B79826C033D00056393C /* RoleCleanPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCleanPresenter.swift; sourceTree = "<group>"; };
+		5396B79A26C035F70056393C /* RoleCleanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCleanRouter.swift; sourceTree = "<group>"; };
+		5396B79C26C036010056393C /* RoleCleanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCleanInteractor.swift; sourceTree = "<group>"; };
+		5396B79F26C041CB0056393C /* RoleCleanRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCleanRepository.swift; sourceTree = "<group>"; };
 		539FC11726BE2B9800226E3A /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		539FC11926BE2BA600226E3A /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		539FC11C26BE2BE400226E3A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +145,7 @@
 			children = (
 				537748CD26BBD3FB0035F654 /* DefinitionRepository.swift */,
 				539FC14826BEB5ED00226E3A /* RoleRepository.swift */,
+				5396B79F26C041CB0056393C /* RoleCleanRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -143,6 +156,25 @@
 				539FC15A26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5396B79326C0320E0056393C /* RoleMVP */ = {
+			isa = PBXGroup;
+			children = (
+				5396B79626C033A40056393C /* RoleCleanView.swift */,
+				5396B79C26C036010056393C /* RoleCleanInteractor.swift */,
+				5396B79826C033D00056393C /* RoleCleanPresenter.swift */,
+				5396B79A26C035F70056393C /* RoleCleanRouter.swift */,
+				5396B79426C032230056393C /* RoleCleanModule.swift */,
+			);
+			path = RoleMVP;
+			sourceTree = "<group>";
+		};
+		5396B79E26C03AA20056393C /* Event */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		539FC11626BE2B8A00226E3A /* Setting */ = {
@@ -250,6 +282,7 @@
 				539FC11B26BE2BCB00226E3A /* Base */,
 				53BEC83D26B8AD37004D667E /* Color&Font */,
 				53BEC86626B8B901004D667E /* DataSource */,
+				5396B79E26C03AA20056393C /* Event */,
 				53BEC84B26B8ADFE004D667E /* Extensions */,
 				53BEC84726B8ADFE004D667E /* KeychainWrapper */,
 				53BEC84526B8ADFE004D667E /* Logging */,
@@ -273,6 +306,7 @@
 				537748C026BBB2090035F654 /* Manifesto */,
 				539FC12726BE615C00226E3A /* Planning */,
 				539FC13F26BEAE5400226E3A /* Roles */,
+				5396B79326C0320E0056393C /* RoleMVP */,
 				539FC11626BE2B8A00226E3A /* Setting */,
 				539FC13726BE88FF00226E3A /* Task */,
 			);
@@ -437,10 +471,13 @@
 				53BEC87126B8D2A3004D667E /* LifeAspectToValueVM.swift in Sources */,
 				537748C626BBB3730035F654 /* ManifestoDetailViewController.swift in Sources */,
 				53BEC84026B8AD69004D667E /* AppColor.swift in Sources */,
+				5396B79526C032230056393C /* RoleCleanModule.swift in Sources */,
 				537748D026BBE97C0035F654 /* ManifestoViewModel.swift in Sources */,
 				53BEC86826B8B919004D667E /* DataSource+Form.swift in Sources */,
+				5396B79D26C036010056393C /* RoleCleanInteractor.swift in Sources */,
 				53BEC85726B8ADFE004D667E /* UIView.swift in Sources */,
 				539FC11A26BE2BA600226E3A /* SettingViewModel.swift in Sources */,
+				5396B79B26C035F70056393C /* RoleCleanRouter.swift in Sources */,
 				53BEC85426B8ADFE004D667E /* KeychainWrapperProtocols.swift in Sources */,
 				53BEC86C26B8C779004D667E /* TextFieldCell.swift in Sources */,
 				539FC11826BE2B9800226E3A /* SettingTableViewController.swift in Sources */,
@@ -463,7 +500,10 @@
 				539FC15C26BEBFE700226E3A /* SevenHabitsChallenges.xcdatamodeld in Sources */,
 				539FC14926BEB5ED00226E3A /* RoleRepository.swift in Sources */,
 				53BEC85A26B8ADFE004D667E /* UIViewController.swift in Sources */,
+				5396B79926C033D00056393C /* RoleCleanPresenter.swift in Sources */,
+				5396B7A026C041CB0056393C /* RoleCleanRepository.swift in Sources */,
 				539FC13926BE891900226E3A /* TaskTableViewController.swift in Sources */,
+				5396B79726C033A40056393C /* RoleCleanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
